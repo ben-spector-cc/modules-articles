@@ -123,7 +123,7 @@ module.exports.fahrenheitToCelsius = function(fahrenheit) {
 };
 ```
 
-`module.exports` is an object that is built-in to the Node.js runtime environment. Other files that wish to make use of a module's exported code import this object using the built-in `require()` function. 
+`module.exports` is an object that is built-in to the Node.js runtime environment. Other files can make use of a module's code by importing this object using the built-in `require()` function. 
 
 Let's update **water-limits.js**:
 
