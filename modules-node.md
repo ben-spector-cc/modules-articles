@@ -8,7 +8,7 @@ Consider the diagram below of an imaginary program written in a file **my_app.js
 
 ![enter image description here](./modules.png)
 
-Instead of having the entire program written within **my_app.js**, each module handles a separate component of the overall program. For example, the **database_logic.js** module may contain code for storing and retreiving data from a database while the **date_formatting.js** module may contain functions designed to easily convert date values from one format to another (a common headache among programmers!).
+Instead of having the entire program written within **my_app.js**, its components are broken up into separate modules that each handle a particular task. For example, the **database_logic.js** module may contain code for storing and retreiving data from a database. Meanwhile the **date_formatting.js** module may contain functions designed to easily convert date values from one format to another (a common headache among programmers!).
 
 > _Note: The words "module" and "file" are often used interchangably_
 
@@ -29,15 +29,15 @@ This modular strategy is sometimes called _separation of concerns_ and is useful
 
 Implementing modules in your program requires a small bit of management. In the remainder of this article, we will be covering:
 * How to use the Node.js `module.exports` object to _export_ code from a file - meaning its functions and/or data can be used by other files/modules
-* How to use the Node.js `require()` function to _import_ the functions and/or data from another module
+* How to use the Node.js `require()` function to _import_ functions and/or data from another module
 
 ## Implementations of Modules in JavaScript: Node.js vs ES6
 
-Before we dive in, it should be noted that there are actually two ways of implementing modules: 
+Before we dive in, it should be noted that there are actually two ways of implementing modules depending on the _runtime environment_: 
 1. using [Node.js’s](https://nodejs.org/en/about/) `module.exports` and `require()` syntax; 
-2.  using the [ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) `import`/`export` syntax. 
+2. using the [ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) `import`/`export` syntax. 
 
-To determine which implementation you choose, you will need to consider the _runtime environment_. A runtime environment is where where your program will be executed. In JavaScript, there are two runtime environments:
+A runtime environment is where where your program will be executed. In JavaScript, there are two runtime environments that roughly correspond to the implementations above. They are (respectively):
 1. Node.js's runtime environment;
 2. Browser's runtime environment. 
 
