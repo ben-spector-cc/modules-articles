@@ -114,10 +114,10 @@ function celsiusToFahrenheit(celsius) {
 	return celsius * (9/5) + 32;
 }
 
-// we can assign a new property to an existing function
+// we store an existing function in module.exports
 module.exports.celsiusToFahrenheit = celsiusToFahrenheit;
 
-// we can also assign a new property to an anonymous function expression
+// we can also store an anonymous function expression in module.exports
 module.exports.fahrenheitToCelsius = function(fahrenheit) {
 	return (fahrenheit - 32) * (5/9);
 };
