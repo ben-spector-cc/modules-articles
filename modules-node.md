@@ -114,7 +114,7 @@ function celsiusToFahrenheit(celsius) {
 	return celsius * (9/5) + 32;
 }
 
-// we store an existing function in module.exports
+// we can store an existing function in module.exports
 module.exports.celsiusToFahrenheit = celsiusToFahrenheit;
 
 // we can also store an anonymous function expression in module.exports
