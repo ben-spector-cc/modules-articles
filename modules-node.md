@@ -141,9 +141,9 @@ console.log(`The freezing point of water in Fahrenheit is ${freezingPointF}`);
 console.log(`The boiling point of water in Fahrenheit is ${boilingPointF}`);
 ```
 
-The `require()` function accepts a string as an argument. That string provides the file path to the module we would like to import. In this case, `./` is a relative path indicating that **converters.js** is stored in the same folder as **water-limits.js**. `require()` then returns the `module.exports` object from the file and we capture that object in the variable `converters`, accessing the function with `converters.celsiusToFahrenheit`.
+The `require()` function accepts a string as an argument. That string provides the file path to the module we would like to import. In this case, `./` is a relative path indicating that **converters.js** is stored in the same folder as **water-limits.js**.
 
-When we use `requite()`, the entire `module.exports` object is returned which means that we can also use the `converters.fahrenheitToCelsius()` function. In many cases, modules will export a large number of functions but we may only ahve a need for one or two of them. We can use object destructuring to extract only the functions we need.
+When we use `requite()`, the entire `module.exports` object is returned which means that we can use both `converters.celsiusToFahrenheit()` and `converters.fahrenheitToCelsius()`. In many cases, modules will export a large number of functions but only one or two of them are needed. We can use object destructuring to extract only the functions we need.
 
 Let's update **celsius-to-fahrenheit.js** and only extract the `celsiusToFahrenheit()` function: 
 
